@@ -74,6 +74,10 @@
   cursor: pointer;
 }
 
+.menu-container {
+  margin: 0 auto;
+}
+
 /* Стили для десктопа */
 @media (min-width: 768px) {
   .menu-container {
@@ -137,6 +141,6 @@
 
 @media(max-width: 715px) {
   .burger {
-      margin-left: 2%;
+    margin-left: 2%;
   }
 }
