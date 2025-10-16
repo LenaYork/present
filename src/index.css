@@ -62,7 +62,13 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .service-button:hover {
+    background-color: #3beae7;
+    color: #FFF;
+  }
+
+  .service-button {
+    background-color: #09B3B0;
   }
 }

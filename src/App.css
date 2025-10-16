@@ -6,24 +6,26 @@
   text-align: center;
 }
 
+.App {
+  width: 98vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1 {
   color: #0dc7c4;
   text-align: center;
+  font-size: 2.2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
 }
 
 @keyframes logo-spin {
