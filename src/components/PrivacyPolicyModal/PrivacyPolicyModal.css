@@ -1,0 +1,222 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #0dc7c4;
+}
+
+.modal-title {
+  color: #0a6c6b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+/* Стили для скроллбара */
+.modal-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.modal-scrollable::-webkit-scrollbar-thumb {
+  background: #0dc7c4;
+  border-radius: 3px;
+}
+
+.modal-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #0a6c6b;
+}
+
+.policy-text {
+  line-height: 1.6;
+}
+
+.policy-text h3 {
+  color: #0a6c6b;
+  margin: 20px 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.policy-text p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.modal-actions {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.agree-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  position: relative;
+  padding-left: 30px;
+}
+
+.agree-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.agree-checkbox:hover input ~ .checkmark {
+  background-color: #ddd;
+}
+
+.agree-checkbox input:checked ~ .checkmark {
+  background-color: #0dc7c4;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.agree-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.pay-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pay-button.active {
+  background-color: #0dc7c4;
+  color: white;
+}
+
+.pay-button.active:hover {
+  background-color: #0a6c6b;
+  transform: translateY(-2px);
+}
+
+.pay-button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+  }
+  
+  .policy-text h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .modal-close {
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+  }
+}

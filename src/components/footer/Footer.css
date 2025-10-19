@@ -36,6 +36,14 @@
   transition: 0.3s ease-in-out;
 }
 
+.footer h3 {
+  text-align: start;
+}
+
+.footer-contacts h3 {
+  margin-left: 15px;
+}
+
 .footer-link:hover,
 .footer-docs p:hover {
   color: #afeae9;

@@ -51,3 +51,10 @@ h1 {
 .read-the-docs {
   color: #888;
 }
+
+/* Блокировка скролла при открытой модалке */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './Footer.css';
+import PrivacyPolicyModal from '../PrivacyPolicyModal/PrivacyPolicyModal';
 
 import logoIcon from '../../assets/logo.svg';
 import mapIcon from '../../assets/map.svg';
 import phoneIcon from '../../assets/phone.svg';
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <footer className="footer">
       <div className="footer-wrapper">
@@ -16,7 +18,7 @@ const Footer = () => {
 
         <div className="footer-docs">
           <h3>Полезная информация</h3>
-          <p>Политика конфиденциальности</p>
+          <p onClick={() => setIsModalOpen(true)}>Политика конфиденциальности</p>
         </div>
 
         <div className="footer-contacts">
@@ -44,6 +46,11 @@ const Footer = () => {
         <div class="social-icon tiktok-icon"></div>
       </div> */}
       </div>
+
+      <PrivacyPolicyModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
 
     </footer >
   )
