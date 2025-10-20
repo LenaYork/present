@@ -10,7 +10,7 @@ import telegramIcon from '../../assets/telegram.svg';
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer-wrapper">
 
         <div className="footer-pic logo">
@@ -19,7 +19,8 @@ const Footer = () => {
 
         <div className="footer-docs">
           <h3>Полезная информация</h3>
-          <p onClick={() => setIsModalOpen(true)}>Политика конфиденциальности</p>
+          <p onClick={() => setIsModalOpen(true)}>РЕГЛАМЕНТ КОУЧИНГ-СЕССИИ</p>
+          <p onClick={() => setIsModalOpen(true)}>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</p>
         </div>
 
         <div className="footer-contacts">

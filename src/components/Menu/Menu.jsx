@@ -19,13 +19,15 @@ const Menu = () => {
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
+        <div className={`line ${isOpen ? 'active' : ''}`}></div>
       </div>
       <nav className={`nav ${isOpen ? 'open' : ''}`}>
         <p className="closeNavIcon" onClick={closeNav}>x</p>
         <ul>
-          <li>Обо мне</li>
-          <li>Услуги</li>
-          <li>Контакты</li>
+          <li href="#about-me">Обо мне</li>
+          <li href="#services">Услуги</li>
+          <li href="#sertificates">Сертификаты</li>
+          <li href="contacts">Контакты</li>
         </ul>
       </nav>
     </div>

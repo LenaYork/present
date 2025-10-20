@@ -28,7 +28,7 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>×</button>
         
-        <h2 className="modal-title">Политика конфиденциальности</h2>
+        <h2 className="modal-title">РЕГЛАМЕНТ КОУЧИНГ-СЕССИИ</h2>
         
         <div className="modal-scrollable">
           <div className="policy-text">

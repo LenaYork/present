@@ -7,9 +7,9 @@ const About = () => {
     return (
         <div className="about">
             <div className="about-wrapper">
-                <img src={Photo} alt="Коуч Имя Фамилия" />
+                <img src={Photo} alt="Коуч Антонина Сапего" />
                 <div className="about-content">
-                    <h2>Антонина Сапего</h2>
+                    <h2 id="about-me">Антонина Сапего</h2>
                     <p className="tagline">Профессиональный коуч по личностному развитию и отношениям</p>
 
                     <div className="facts">
