@@ -1,3 +1,9 @@
+:root {
+  --color-primary: #8AA995;
+  --color-old: #09B3B0;
+  /* #0dc7c4; */
+}
+
 #root {
   width: 100vw;
   display: flex;
@@ -17,7 +23,7 @@
 }
 
 h1 {
-  color: #0dc7c4;
+  color: var(--color-primary);
   text-align: center;
   font-size: 2.2rem;
 }

@@ -5,6 +5,7 @@ import PrivacyPolicyModal from '../PrivacyPolicyModal/PrivacyPolicyModal';
 import logoIcon from '../../assets/logo.svg';
 import mapIcon from '../../assets/map.svg';
 import phoneIcon from '../../assets/phone.svg';
+import telegramIcon from '../../assets/telegram.svg';
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,16 +24,25 @@ const Footer = () => {
 
         <div className="footer-contacts">
           <h3 className="footer-title">Контакты:</h3>
-          <div className="mail">
-            <a href="mailto:psychologist@example.com" className="footer-link">
-              <img src={mapIcon} alt="email" className="footer-item" />
-              psychologist@example.com
+
+          <div className="phone">
+            <a href="tel:+48884653971" className="footer-link">
+              <img src={phoneIcon} alt="phone" className="footer-item" />
+              +48 884 653 971
             </a>
           </div>
-          <div className="phone">
-            <a href="tel:+136745677554" className="footer-link">
-              <img src={phoneIcon} alt="phone" className="footer-item" />
-              +13 674 567 75 54
+
+          <div className="mail">
+            <a href="antaninasapego@gmail.com" className="footer-link">
+              <img src={mapIcon} alt="email" className="footer-item" />
+              antaninasapego@gmail.com
+            </a>
+          </div>
+
+          <div className="telegram">
+            <a href="https://t.me/antonina_sapego_psiholog" className="footer-link">
+              <img src={telegramIcon} alt="telegram" className="footer-item" />
+              antonina_sapego_psiholog
             </a>
           </div>
         </div>

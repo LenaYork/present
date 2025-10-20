@@ -51,7 +51,7 @@
 }
 
 .modal-close:hover {
-  color: #0dc7c4;
+  color: var(--color-primary);
 }
 
 .modal-title {
@@ -79,7 +79,7 @@
 }
 
 .modal-scrollable::-webkit-scrollbar-thumb {
-  background: #0dc7c4;
+  background: var(--color-primary);
   border-radius: 3px;
 }
 
@@ -142,7 +142,7 @@
 }
 
 .agree-checkbox input:checked ~ .checkmark {
-  background-color: #0dc7c4;
+  background-color: var(--color-primary);
 }
 
 .checkmark:after {
@@ -173,7 +173,7 @@
 }
 
 .pay-button.active {
-  background-color: #0dc7c4;
+  background-color: var(--color-primary);
   color: white;
 }
 

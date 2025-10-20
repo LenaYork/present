@@ -69,7 +69,7 @@
 
 .duration,
 .price {
-    color: #0dc7c4;
+    color: var(--color-primary);
 }
 
 .service-button {
@@ -77,7 +77,7 @@
     box-sizing: border-box;
     width: 100%;
     padding: 12px 20px;
-    background-color: #0dc7c4;
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -87,7 +87,7 @@
 }
 
 .service-button:hover {
-    background-color: #09B3B0;
+    background-color: var(--color-primary);
 }
 
 /* Адаптивность */

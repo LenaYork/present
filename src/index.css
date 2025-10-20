@@ -69,6 +69,6 @@ button:focus-visible {
   }
 
   .service-button {
-    background-color: #09B3B0;
+    background-color: var(--color-primary);
   }
 }
