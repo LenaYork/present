@@ -11,7 +11,7 @@ const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <footer className="footer" id="footer">
-      <div className="footer-wrapper">
+      <div className="footer-wrapper" id="contacts">
 
         <div className="footer-pic logo">
           <img src={logoIcon} alt="psychologist" />
@@ -34,16 +34,20 @@ const Footer = () => {
           </div>
 
           <div className="mail">
-            <a href="antaninasapego@gmail.com" className="footer-link">
-              <img src={mapIcon} alt="email" className="footer-item" />
-              antaninasapego@gmail.com
+            <a href="mailto:antaninasapego@gmail.com" className="footer-link">
+              <img src={mapIcon} alt="email" className="footer-item"
+              target="_blank"
+              rel="noopener noreferrer" />
+                antaninasapego@gmail.com
             </a>
           </div>
 
           <div className="telegram">
-            <a href="https://t.me/antonina_sapego_psiholog" className="footer-link">
-              <img src={telegramIcon} alt="telegram" className="footer-item" />
-              antonina_sapego_psiholog
+            <a href="https://t.me/antonina_sapego_psiholog?text=Добрый день! Хочу записаться на консультацию." className="footer-link">
+              <img src={telegramIcon} alt="telegram" className="footer-item" 
+              target="_blank"
+              rel="noopener noreferrer"/>
+                antonina_sapego_psiholog
             </a>
           </div>
         </div>

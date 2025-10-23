@@ -148,3 +148,8 @@
     margin-left: 2%;
   }
 }
+
+.menu a {
+  color: var(--color-primary);
+  white-space: nowrap;
+}

@@ -23,11 +23,11 @@ const Menu = () => {
       </div>
       <nav className={`nav ${isOpen ? 'open' : ''}`}>
         <p className="closeNavIcon" onClick={closeNav}>x</p>
-        <ul>
-          <li href="#about-me">Обо мне</li>
-          <li href="#services">Услуги</li>
-          <li href="#sertificates">Сертификаты</li>
-          <li href="contacts">Контакты</li>
+        <ul className="menu">
+          <li><a href="#about-me">Обо мне</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#sertificates">Сертификаты</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </div>

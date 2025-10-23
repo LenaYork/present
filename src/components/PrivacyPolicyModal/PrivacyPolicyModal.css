@@ -32,6 +32,7 @@
     opacity: 0;
     transform: scale(0.9) translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -89,6 +90,7 @@
 
 .policy-text {
   line-height: 1.6;
+  text-align: left;
 }
 
 .policy-text h3 {
@@ -100,6 +102,7 @@
 .policy-text p {
   margin-bottom: 15px;
   color: #555;
+  text-indent: 10px;
 }
 
 .modal-actions {
@@ -137,11 +140,11 @@
   transition: all 0.3s ease;
 }
 
-.agree-checkbox:hover input ~ .checkmark {
+.agree-checkbox:hover input~.checkmark {
   background-color: #ddd;
 }
 
-.agree-checkbox input:checked ~ .checkmark {
+.agree-checkbox input:checked~.checkmark {
   background-color: var(--color-primary);
 }
 
@@ -158,7 +161,7 @@
   transform: rotate(45deg);
 }
 
-.agree-checkbox input:checked ~ .checkmark:after {
+.agree-checkbox input:checked~.checkmark:after {
   display: block;
 }
 
@@ -194,11 +197,11 @@
     padding: 20px;
     width: 95%;
   }
-  
+
   .modal-title {
     font-size: 1.3rem;
   }
-  
+
   .policy-text h3 {
     font-size: 1rem;
   }
@@ -208,15 +211,26 @@
   .modal-overlay {
     padding: 10px;
   }
-  
+
   .modal-content {
     padding: 15px;
     border-radius: 15px;
   }
-  
+
   .modal-close {
     top: 10px;
     right: 15px;
     font-size: 1.5rem;
   }
+}
+
+.modal-list-item {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 10px;
+}
+
+.modal-list-item li:before {
+  content: counter(item, lower-alpha) ") ";
+  counter-increment: item;
 }
