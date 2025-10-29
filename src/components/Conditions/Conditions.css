@@ -1,0 +1,312 @@
+.agreement-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.agreement-page {
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    flex: 1;
+}
+
+.agreement-page__container {
+    max-width: 80vw;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Ссылка назад */
+.agreement-page__back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #8aa995;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(138, 169, 149, 0.1);
+}
+
+.agreement-page__back-link:hover {
+    color: #0a6c6b;
+    background: rgba(138, 169, 149, 0.2);
+}
+
+.agreement-page__back-arrow {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.agreement-page__title {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #0a6c6b;
+    font-weight: 700;
+}
+
+.agreement-page__content {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.agreement-page__content h2 {
+    color: #8aa995;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.agreement-page__content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.agreement-page__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e9ecef;
+}
+
+/* Красивый чекбокс с галочкой */
+.agreement-page__checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 35px;
+}
+
+.agreement-page__checkbox-label:hover {
+    color: #0a6c6b;
+}
+
+.agreement-page__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.agreement-page__checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #eee;
+    border: 2px solid #8aa995;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.agreement-page__checkbox-label:hover .agreement-page__checkmark {
+    background-color: #ddd;
+}
+
+.agreement-page__checkbox-input:checked~.agreement-page__checkmark {
+    background-color: #8aa995;
+    border-color: #8aa995;
+}
+
+.agreement-page__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.agreement-page__checkbox-input:checked~.agreement-page__checkmark:after {
+    display: block;
+}
+
+.agreement-page__payment-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    max-width: 500px;
+    color: white !important;
+}
+
+.agreement-page__payment-btn--disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.agreement-page__payment-btn--active {
+    background: linear-gradient(45deg, #8aa995, #0a6c6b) !important;
+    background-size: 200% 200% !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(138, 169, 149, 0.3);
+}
+
+.agreement-page__payment-btn--active:hover {
+    background-position: right center !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(138, 169, 149, 0.4);
+}
+
+.agreement-page__payment-btn--active:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(138, 169, 149, 0.3);
+}
+
+/* Адаптивность */
+.conditions {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.conditions-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 3rem;
+    color: #0a6c6b;
+}
+
+/* Кнопка договора */
+.conditions-agreement-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #8aa995, #0a6c6b);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(138, 169, 149, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.conditions-agreement-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.conditions-agreement-btn:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(138, 169, 149, 0.4);
+    color: #213547;
+}
+
+.conditions-agreement-btn:hover::before {
+    left: 100%;
+}
+
+.conditions-agreement-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(138, 169, 149, 0.3);
+}
+
+.conditions-btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.conditions-btn-icon {
+    font-size: 1.2em;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.conditions-agreement-btn:hover .conditions-btn-icon {
+    transform: scale(1.1);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .conditions {
+        padding: 1.5rem 1rem;
+    }
+
+    .conditions-agreement-btn {
+        padding: 0.875rem 1.75rem;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .conditions-agreement-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .agreement-page__container {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+        max-width: 90vw;
+    }
+
+    .agreement-page__content {
+        font-size: 0.95rem;
+    }
+
+    .agreement-page__checkbox-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .agreement-page {
+        padding: 1rem 0.5rem;
+    }
+
+    .agreement-page__container {
+        padding: 1.5rem 1rem;
+    }
+
+    .agreement-page__payment-btn {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+
+    .agreement-page__back-link {
+        font-size: 0.9rem;
+    }
+}

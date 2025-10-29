@@ -28,7 +28,7 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>×</button>
 
-        <h2 className="modal-title">Политика конфиденциальности (или договор оферты, я запуталась)</h2>
+        <h2 className="modal-title">Политика конфиденциальности</h2>
 
         <div className="modal-scrollable">
           <div className="policy-text">
@@ -114,7 +114,7 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
               onChange={handleAgreeChange}
             />
             <span className="checkmark"></span>
-            Я ознакомлен(а) с правилами и согласен(на) с ними
+            Я ознакомлен(а) с регламентом и согласен(на)
           </label>
 
           <button

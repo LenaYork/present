@@ -66,6 +66,7 @@ const Menu = () => {
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
         <div className={`line ${isOpen ? 'active' : ''}`}></div>
+        <div className={`line ${isOpen ? 'active' : ''}`}></div>
       </div>
 
       {isOpen && <div className="menu-overlay"></div>}
@@ -75,6 +76,7 @@ const Menu = () => {
         <ul className="menu">
           <li><a href="#about-me" onClick={handleMenuLinkClick}>Обо мне</a></li>
           <li><a href="#services" onClick={handleMenuLinkClick}>Услуги</a></li>
+          <li><a href="#services" onClick={handleMenuLinkClick}>Оплата</a></li>
           <li><a href="#sertificates" onClick={handleMenuLinkClick}>Сертификаты</a></li>
           <li><a href="#contacts" onClick={handleMenuLinkClick}>Контакты</a></li>
         </ul>

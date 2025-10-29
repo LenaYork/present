@@ -1,0 +1,298 @@
+.payment-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.payment-page {
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+    flex: 1;
+    position: relative;
+}
+
+/* Хлебные крошки */
+.payment-breadcrumbs {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-link {
+    color: #8aa995;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #0a6c6b;
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: #999;
+}
+
+.breadcrumb-current {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* Банковская форма */
+.bank-payment-form {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid #c5e1a5;
+    position: relative;
+}
+
+.bank-payment-form::before {
+    content: "OFFICIAL PAYMENT DETAILS";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #8aa995;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.bank-header {
+    text-align: center;
+    border-bottom: 2px solid #8aa995;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.bank-title {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Поля формы */
+.bank-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bank-field:hover {
+    background: #f1f8e9;
+    transform: translateX(5px);
+}
+
+.bank-field-copied {
+    background: #e8f5e8 !important;
+    border-bottom-color: #4caf50;
+}
+
+.bank-field-copied .field-data {
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+.bank-field-copied .copy-icon {
+    color: #4caf50;
+}
+
+.field-name {
+    color: #666;
+    font-weight: 500;
+    min-width: 140px;
+}
+
+.field-data {
+    color: #333;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    text-align: right;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+.copy-icon-container {
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.copy-icon {
+    color: #8aa995;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.bank-field:hover .copy-icon {
+    background: rgba(138, 169, 149, 0.1);
+    transform: scale(1.1);
+}
+
+/* Уведомление о копировании */
+.copy-notification {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: #4caf50;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+    font-weight: 500;
+    z-index: 1000;
+    text-align: center;
+    min-width: 200px;
+}
+
+.copy-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация появления */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.copy-notification.show {
+    animation: slideInUp 0.3s ease-out;
+}
+
+/* Контейнер для иконки и тултипа */
+.copy-icon-container {
+    position: relative;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.copy-icon {
+    color: #8aa995;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.bank-field:hover .copy-icon {
+    background: rgba(138, 169, 149, 0.1);
+    transform: scale(1.1);
+}
+
+/* Тултип */
+.copy-tooltip {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #8aa995;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 10;
+    margin-top: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copy-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 10px;
+    border: 5px solid transparent;
+    border-bottom-color: #8aa995;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .payment-page {
+        padding: 1rem 0.5rem;
+    }
+
+    .bank-payment-form {
+        padding: 20px;
+        margin: 0 1rem;
+    }
+
+    .bank-title {
+        font-size: 1.5rem;
+    }
+
+    .bank-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .field-name {
+        min-width: auto;
+    }
+
+    .field-data {
+        text-align: left;
+        width: 100%;
+    }
+
+    .copy-icon-container {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .copy-tooltip {
+        right: -10px;
+        top: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bank-payment-form {
+        padding: 15px;
+    }
+
+    .bank-title {
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+
+    .payment-breadcrumbs {
+        font-size: 0.8rem;
+    }
+
+    .copy-notification {
+        right: 10px;
+        left: 10px;
+        text-align: center;
+    }
+}

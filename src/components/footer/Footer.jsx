@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './Footer.css';
 import PrivacyPolicyModal from '../PrivacyPolicyModal/PrivacyPolicyModal';
 
@@ -19,12 +20,35 @@ const Footer = () => {
 
         <div className="footer-docs">
           <h3>Полезная информация</h3>
-          <p onClick={() => setIsModalOpen(true)}>РЕГЛАМЕНТ КОУЧИНГ-СЕССИИ</p>
+          <Link to="/agreement">
+            <p>РЕГЛАМЕНТ КОУЧИНГ-СЕССИИ</p>
+          </Link>
+
           <p onClick={() => setIsModalOpen(true)}>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</p>
         </div>
 
         <div className="footer-contacts">
           <h3 className="footer-title">Контакты:</h3>
+
+          <div className="telegram">
+            <a href="https://t.me/antonina_sapego_psiholog?text=Добрый день! Хочу записаться на консультацию." className="footer-link">
+              <img src={telegramIcon} alt="telegram" className="footer-item"
+                target="_blank"
+                rel="noopener noreferrer" />
+              antonina_sapego_psiholog
+            </a>
+          </div>
+
+          <div className="mail">
+            <a href="mailto:antaninasapego@gmail.com" className="footer-link">
+              <img src={mapIcon} alt="email" className="footer-item"
+                target="_blank"
+                rel="noopener noreferrer" />
+              antaninasapego@gmail.com
+            </a>
+          </div>
+
+
 
           <div className="phone">
             <a href="tel:+48884653971" className="footer-link">
@@ -33,23 +57,6 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="mail">
-            <a href="mailto:antaninasapego@gmail.com" className="footer-link">
-              <img src={mapIcon} alt="email" className="footer-item"
-              target="_blank"
-              rel="noopener noreferrer" />
-                antaninasapego@gmail.com
-            </a>
-          </div>
-
-          <div className="telegram">
-            <a href="https://t.me/antonina_sapego_psiholog?text=Добрый день! Хочу записаться на консультацию." className="footer-link">
-              <img src={telegramIcon} alt="telegram" className="footer-item" 
-              target="_blank"
-              rel="noopener noreferrer"/>
-                antonina_sapego_psiholog
-            </a>
-          </div>
         </div>
 
         {/* <div className="footer-social">

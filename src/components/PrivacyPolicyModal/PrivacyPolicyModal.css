@@ -129,7 +129,7 @@
   cursor: pointer;
 }
 
-.checkmark {
+.agree-checkbox .checkmark {
   position: absolute;
   left: 0;
   top: 0;
@@ -148,7 +148,7 @@
   background-color: var(--color-primary);
 }
 
-.checkmark:after {
+.agree-checkbox .checkmark:after {
   content: "";
   position: absolute;
   display: none;
