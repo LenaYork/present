@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './Payment.css';
+import CookieConsent from "../CookieConsent/CookieConsent";
 
 const Payment = () => {
     const [copiedField, setCopiedField] = useState(null);
@@ -122,6 +123,7 @@ const Payment = () => {
                 </div>
 
             </div>
+            <CookieConsent />
         </div>
     );
 };

@@ -9,6 +9,8 @@ import Services from './components/Services/Services'
 import Footer from './components/footer/Footer'
 import Agreement from './components/Agreement/Agreement'
 import Payment from './components/Payment/Payment'
+import Certificates from './components/Certificates/Certificates';
+import CookieConsent from './components/CookieConsent/CookieConsent';
 
 function App() {
   const { pathname } = useLocation();
@@ -26,9 +28,11 @@ function App() {
             <Menu />
             <h1>Коуч по личностному развитию и отношениям</h1>
             <About />
+            <Certificates />
             <Conditions />
             <Services />
             <Footer />
+            <CookieConsent />
           </>
         } />
 

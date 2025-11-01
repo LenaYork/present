@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './Agreement.css';
 import { agreementContent } from '../../data/agreementContent';
+import CookieConsent from "../CookieConsent/CookieConsent";
 
 const Agreement = () => {
     const [isAgreed, setIsAgreed] = useState(false);
@@ -172,6 +173,7 @@ const Agreement = () => {
                     </button>
                 </form>
             </div>
+            <CookieConsent />
         </div>
     );
 };
