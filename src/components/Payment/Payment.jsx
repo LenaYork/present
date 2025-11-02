@@ -83,12 +83,12 @@ const Payment = () => {
                     {/* Цель платежа */}
                     <div
                         className={`bank-field ${copiedField === 'purpose' ? 'bank-field-copied' : ''}`}
-                        onClick={() => copyToClipboard('sesji coachingowych', 'purpose')}
+                        onClick={() => copyToClipboard('sesja coachingowa', 'purpose')}
                         onMouseEnter={() => setHoveredField('purpose')}
                         onMouseLeave={() => setHoveredField(null)}
                     >
                         <span className="field-name">Цель платежа:</span>
-                        <span className="field-data">sesji coachingowych</span>
+                        <span className="field-data">sesja coachingowa</span>
                         <div className="copy-icon-container">
                             <span className="copy-icon">📄</span>
                             {hoveredField === 'purpose' && (
