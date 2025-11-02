@@ -133,8 +133,8 @@ export const agreementContent = [
     {
         type: 'paragraph',
         content: [
-            "2. Umowa w formie elektronicznej zawierana jest za pośrednictwem strony internetowej www.XXX.pl. Umowę uważa się za zawartą w chwili, gdy Klient zaakceptuje postanowienia niniejszego Regulaminu w całości, bez zastrzeżeń, oraz dokona płatności za zamówioną Usługę zgodnie z zasadami określonymi w Regulaminie.",
-            "2. Договор в электронной форме заключается через сайт www.XXX.pl. Договор считается заключённым в момент, когда Клиент принимает положения настоящего Регламента в полном объёме, без оговорок, и производит оплату заказанной Услуги в соответствии с правилами, установленными Регламентом."
+            "2. Umowa w formie elektronicznej zawierana jest za pośrednictwem strony internetowej coachantonina.netlify.app. Umowę uważa się za zawartą w chwili, gdy Klient zaakceptuje postanowienia niniejszego Regulaminu w całości, bez zastrzeżeń, oraz dokona płatności za zamówioną Usługę zgodnie z zasadami określonymi w Regulaminie.",
+            "2. Договор в электронной форме заключается через сайт coachantonina.netlify.app. Договор считается заключённым в момент, когда Клиент принимает положения настоящего Регламента в полном объёме, без оговорок, и производит оплату заказанной Услуги в соответствии с правилами, установленными Регламентом."
         ]
     },
     {
@@ -158,8 +158,8 @@ export const agreementContent = [
     {
         type: 'paragraph',
         content: [
-            "1. Po zawarciu Umowy w trybie określonym w rozdziale II niniejszego Regulaminu, Strony ustalają formę świadczenia Usług (stacjonarną lub zdalną), a także uzgadniają termin przeprowadzenia sesji coachingowych z wykorzystaniem środków komunikacji elektronicznej – za pośrednictwem poczty elektronicznej lub komunikatorów wskazanych przez Wykonawcę w sekcji „Kontakt” na stronie internetowej www.XXX.pl.",
-            "1. После заключения Договора в порядке, предусмотренном разделом II настоящего Регламента, Стороны определяют форму оказания Услуг (очную или дистанционную), а также согласуют время проведения коучинговых сессий с использованием средств электронной коммуникации — по электронной почте или через мессенджеры, указанные Исполнителем в разделе «Контакты» на сайте www.XXX.pl."
+            "1. Po zawarciu Umowy w trybie określonym w rozdziale II niniejszego Regulaminu, Strony ustalają formę świadczenia Usług (stacjonarną lub zdalną), a także uzgadniają termin przeprowadzenia sesji coachingowych z wykorzystaniem środków komunikacji elektronicznej – za pośrednictwem poczty elektronicznej lub komunikatorów wskazanych przez Wykonawcę w sekcji „Kontakt” na stronie internetowej coachantonina.netlify.app.",
+            "1. После заключения Договора в порядке, предусмотренном разделом II настоящего Регламента, Стороны определяют форму оказания Услуг (очную или дистанционную), а также согласуют время проведения коучинговых сессий с использованием средств электронной коммуникации — по электронной почте или через мессенджеры, указанные Исполнителем в разделе «Контакты» на сайте coachantonina.netlify.app."
         ]
     },
     {
